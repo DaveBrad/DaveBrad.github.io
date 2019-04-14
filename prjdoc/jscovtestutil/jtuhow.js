@@ -1,5 +1,5 @@
-/* Copyright (c) 2019 dbradley. 
- * 
+/* Copyright (c) 2019 dbradley.
+ *
  * License: see license.html that accompanies JscovTestUtil.
  */
 var imageIdArr = new Array();
@@ -70,8 +70,8 @@ function buttFocus(buttEle) {
 }
 
 function buildTOC() {
-  // <a href="org/jtestdb/selenium/jscov/JscovTestUtil.html" 
-  // title="class in org.jtestdb.selenium.jscov" 
+  // <a href="org/jtestdb/selenium/jscov/JscovTestUtil.html"
+  // title="class in org.jtestdb.selenium.jscov"
   // target="classFrame">JscovTestUtil</a>
   var appendToTocEle = document.getElementById('tocele');
 
@@ -84,7 +84,7 @@ function buildTOC() {
 
   hdrOfStrEleAnchor.innerHTML = "<i>HOME: JscovTestUtil </i>";
 
-  hdrOfStrEle.appendChild(hdrOfStrEleAnchor);
+  // hdrOfStrEle.appendChild(hdrOfStrEleAnchor);
   appendToTocEle.appendChild(hdrOfStrEle);
 
   getHeadersInOrderBySequenceProcessing(document.body, appendToTocEle, 1);
