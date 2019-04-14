@@ -84,7 +84,12 @@ function buildTOC() {
 
   hdrOfStrEleAnchor.innerHTML = "<i>HOME: JscovTestUtil </i>";
 
-  // hdrOfStrEle.appendChild(hdrOfStrEleAnchor);
+  // hide this anchor if being access on <user>.github.io web-server
+  var testHttp = document.location.href.indexOf("http");
+  var testGithibio = document.location.href.indexOf(".github.io");
+  if(testGithibio === -1 & testHttp === 0){
+     hdrOfStrEle.appendChild(hdrOfStrEleAnchor);
+  }
   appendToTocEle.appendChild(hdrOfStrEle);
 
   getHeadersInOrderBySequenceProcessing(document.body, appendToTocEle, 1);
